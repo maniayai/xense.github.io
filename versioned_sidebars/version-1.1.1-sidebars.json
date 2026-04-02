@@ -1,0 +1,23 @@
+{
+  "tutorialSidebar": [
+    "intro",
+    {
+      "type": "category",
+      "label": "tutorial-basics",
+      "items": [
+        "tutorial-basics/create-a-blog-post",
+        "tutorial-basics/congratulations",
+        "tutorial-basics/markdown-features"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "extras",
+      "items": [
+        "tutorial-extras/manage-docs-versions",
+        "tutorial-extras/translate-your-site",
+        "tutorial-basics/markdown-features"
+      ]
+    }
+  ]
+}
