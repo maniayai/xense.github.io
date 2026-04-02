@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktest=globalThis.webpackChunktest||[]).push([[1903],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/xense.github.io/blog","blogTitle":"Blog","authorsListPath":"/xense.github.io/blog/authors"}')}}]);
