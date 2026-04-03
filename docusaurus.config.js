@@ -49,7 +49,7 @@ const config = {
   organizationName: 'maniayai', // Usually your GitHub org/user name.
   // GitHub仓库名称
   projectName: 'xense.github.io', // Usually your repo name.
-  // 部署静态文件的分支名称。
+  // 部署静态文件的分支名称。就是npm run build后构建的文件
   deploymentBranch: 'docs',
   // Docusaurus 检测到任何损坏链接时的行为。
   onBrokenLinks: 'throw',
@@ -81,8 +81,29 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          
+          lastVersion: 'current',
+          versions: {  // ✅ 正确：在这里配置
+            current: 
+            {
+              label: '2.0.0',
+              path: 'next',  
+              // banner: 'unreleased' 	// 显示“此为未发布版本”
+            },
+            '1.1.0': 
+            {
+              label: '1.1.0',
+              path: '1.1.0',
+              banner: 'none'  // 不显示横幅 ✅
+            },
+            '1.1.1': 
+            {
+              label: '1.1.1',
+              path: '1.1.',
+              banner: 'unmaintained', //显示“不再维护”
+            },
+          },
+         
         },
         blog: {
           showReadingTime: true,
@@ -117,7 +138,7 @@ const config = {
         disableSwitch: false,      // 不禁止用户切换主题（显示切换按钮）
         respectPrefersColorScheme: true,  // 按照系统偏好
       },
-      // 自动折叠侧边栏类别 展开一个类别时折叠所有同级类别
+
       docs: {
         sidebar: {
           // 可隐藏侧边栏
@@ -144,33 +165,26 @@ const config = {
             label: 'Tutorial',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
-          {
-          type: 'dropdown',
-          label: '生态',        // 下拉菜单的显示名称
-          position: 'left',    // 显示位置: 'left' 或 'right'
-          items: [   
-              // {
-              //   label: 'React',
-              //   to: '/shared_file/shared1.md',  // 指向存在的文档
-              // },
-              // {
-              //   label: 'Vue',
-              //   to: '/shared_file/shared2.md',  // 指向存在的文档
-              // },          // 下拉菜单里的选项
-              {
-                label: 'GitHub',
-                href: 'https://github.com', // 链接到站外
-              },
-            // 还可以添加更多项...
-          ],
-        },
          {
           type: 'docsVersionDropdown',
-          versions: {
-            current: {label: 'Version 4.0'},
-            '1.1.0': {label: 'Version 3.0'},
-            '1.1.1': {label: 'Version 2.0'},
-          },
+          // versions: {
+          //   // 开发版版本
+          //   current: 
+          //   {
+          //     label: '2.0.0',
+          //     banner: 'unreleased' 	// 显示“此为未发布版本”
+          //   },
+          //   '1.1.0': 
+          //   {
+          //     label: '1.1.0',
+          //     banner: 'none'  // 不显示横幅 ✅
+          //   },
+          //   '1.1.1': 
+          //   {
+          //     label: '1.1.1',
+          //     banner: 'unmaintained', //显示“不再维护”
+          //   },
+          // },
         },
           {
             type: 'localeDropdown',
