@@ -81,13 +81,12 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          
           lastVersion: 'current',
           versions: {  // ✅ 正确：在这里配置
             current: 
             {
               label: '2.0.0',
-              path: 'next',  
+              path: 'docs',  
               // banner: 'unreleased' 	// 显示“此为未发布版本”
             },
             '1.1.0': 

@@ -37,8 +37,6 @@ const sidebars = {
       items: [
         'tutorial-extras/manage-docs-versions',
         'tutorial-extras/translate-your-site',
-        'tutorial-basics/markdown-features',
-
       ],
     },
   ],
